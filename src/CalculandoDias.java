@@ -5,14 +5,14 @@ public class CalculandoDias {
 	public static void main(String[] args){
 		Scanner entrada = new Scanner(System.in);
 		
-		System.out.print("Quantidade de anos, meses e dias de vida (contando até ontem): ");
+		System.out.print("Quantidade de anos, meses e dias de vida, contando até ontem: ");
 		String idade = entrada.nextLine();
 
-		System.out.println("Você viveu, contando até ontem, "+idade(idade)+" dias.");
+		System.out.println("Você viveu, contando até ontem, "+calcularIdadeEmDias(idade)+" dias.");
 		
 	}
 	
-	public static int idade(String idade) {
+	public static int calcularIdadeEmDias(String idade) {
 		String idadeCorreta = idade.trim();
 		
 		String[] idadeSeparada = idadeCorreta.split(" ");
