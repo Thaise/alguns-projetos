@@ -20,15 +20,9 @@ public class CalculandoPercentualVotos {
 			double votosNulos = entrada.nextDouble();
 			
 			encontraErros(eleitores,votosValidos,votosBrancos,votosNulos);
-	
-			double[] totalVotos = new double[3];
 				
-			totalVotos = calcularVotos(eleitores,votosValidos, votosBrancos, votosNulos);
-				
-			totalVotos[0] = calcularVotos(eleitores,votosValidos, votosBrancos, votosNulos)[0];
-			totalVotos[1] = calcularVotos(eleitores,votosValidos, votosBrancos, votosNulos)[1];
-			totalVotos[2] = calcularVotos(eleitores,votosValidos, votosBrancos, votosNulos)[2];
-				
+			double[]totalVotos = calcularVotos(eleitores,votosValidos, votosBrancos, votosNulos);
+			
 			System.out.println("Porcentagem de votos VÁLIDOS em relação à quantidade de eleitores: "+totalVotos[0]+"%");
 			System.out.println("Porcentagem de votos BRANCOS em relação à quantidade de eleitores: "+totalVotos[1]+"%");
 			System.out.println("Porcentagem de votos NULOS em relação à quantidade de eleitores: "+totalVotos[2]+"%");
